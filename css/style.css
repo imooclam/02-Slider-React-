@@ -1,0 +1,142 @@
+/* ***************************
+***************************
+
+ 02- Slider ProJect
+***************************
+*************************** */
+
+.header__section {
+  padding: 5rem;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.titles {
+  font-weight: 700;
+  color: var(--grey-900);
+  text-align: center;
+  position: relative;
+}
+.title {
+  font-weight: 700;
+  color: var(--grey-900);
+}
+.title__underline {
+  width: 8rem;
+  height: 0.25rem;
+  background: var(--clr-gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 span {
+  color: #e67e22;
+  margin-inline: 2rem;
+  font-weight: 700;
+}
+h1 {
+  font-weight: 600;
+}
+.section__center {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 80vw;
+  /* should insert height */
+  height: 45rem;
+  max-width: 800px;
+  text-align: center;
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.person__img {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  height: 150px;
+  border-radius: 50%;
+  padding: 2px;
+  margin-bottom: 1rem;
+  /* border: 2px solid var(--clr-primary-6); */
+  box-shadow: 0px 2px 10px 1px var(--clr-primary-9);
+}
+h4 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #e67e22;
+}
+.title {
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--clr-grey-3);
+  text-align: center;
+  margin: 2rem auto;
+}
+.text {
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 3rem auto;
+  color: var(--clr-grey-5);
+  text-align: center;
+}
+.icon {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+
+  color: #cf711f;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  background: var(--clr-grey-5);
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.prev:hover,
+.next:hover {
+  background: var(--clr-primary-5);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+article.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  margin-top: 3rem;
+  transform: translateY(0%);
+  /* -OPacity */
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+article.slide.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.slide.lastSlide {
+  transform: translateX(-100%);
+}
+article.slide.nextSlide {
+  transform: translateX(100%);
+}
